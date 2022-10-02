@@ -1,11 +1,12 @@
 :root {
-    --dark: #374151;
+    --dark: rgb(10, 15, 70);
+    --deep: rgb(20, 20, 100);
     --darker: #1f2937;
     --darkest: #111827;
-    --gray: #6b7280;
+    --gray: #a7cfe9;
     --light: #eee;
-    --pink: #ec4899;
-    --purple: #8b5cf6;
+    --pink: #f50f82;
+    --purple: #8b5cf9;
 
 }
 
@@ -19,7 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: var(--dark);
+    background: linear-gradient(to right, var(--deep), var(--dark));
     color: #fff;
 }
 
@@ -32,14 +33,19 @@ main {
 }
 
 header h1 {
-    font-size: 2.5rem;
-    font-weight: 300;
+    font-size: 1.5rem;
+    font-weight: 600;
     color: var(--gray);
-    margin-bottom: 1rem;
+    text-align: center;
+    /*   margin-top: none; */
+    margin-bottom: 5rem;
 }
 
 #new-task-form {
     display: flex;
+    justify-content: center;
+    margin-left: 15px;
+    padding-left: 20px;
 }
 
 input,
@@ -62,12 +68,15 @@ button {
 
 #new-task-input::placeholder {
     color: var(--gray);
+    font-weight: 100;
+    font-size: 1.0rem;
+    opacity: 0.6;
 }
 
 #new-task-submit {
     color: var(--pink);
-    font-size: 1.25rem;
-    font-weight: 700;
+    font-size: 1.33rem;
+    font-weight: 900;
     background-image: linear-gradient(to right, var(--pink), var(--purple));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -93,7 +102,7 @@ main {
 
 .task-list h2 {
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 600;
     color: var(--gray);
     margin-bottom: 1rem;
 }
@@ -157,5 +166,5 @@ main {
 }
 
 .task .actions .delete {
-    color: crimson;
+    color: red;
 }
